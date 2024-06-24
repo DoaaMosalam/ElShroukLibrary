@@ -103,7 +103,10 @@ class Library {
             }
         }
     }
-
+//    private fun findInfoBookByID(books: List<Books>, id:String): String {
+//        return (books.find { it.book == id }.toString())
+//
+//    }
     private fun findInfoBookByID(books: List<Books>, id:String):List<Books>{
         return books.filter { it.id.toString().contains(id,ignoreCase = true) || it.author.idAuthor.toString().contains(id,ignoreCase = true) }
 

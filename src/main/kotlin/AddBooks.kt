@@ -31,7 +31,7 @@ class RequestBooks {
                 "6" -> addNumVersion(books.toMutableList())
                 "7" -> deleteAuthorById(books.toMutableList())
                 "8" -> {
-                    println("Exiting...")
+                    println("Sign Out...")
                     return
                 }
 
