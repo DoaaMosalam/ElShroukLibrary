@@ -7,12 +7,19 @@ import java.io.IOException
 
 object LibraryCSVReader {
 
-     fun printBooks(list: List<Books>): List<Books> {
-        for (i in list.indices) {
-            println("$i : ${list[i]}")
+    fun printBooks(list: List<Books>): List<Books> {
+        for ((index, book) in list.withIndex()) {
+            println("$index : $book")
         }
         return list
     }
+
+//     fun printBooks(list: List<Books>): List<Books> {
+//        for (i in list.indices) {
+//            println("$i : ${list[i]}")
+//        }
+//        return list
+//    }
 
     fun readLibraryBooks(filePath: String): List<Books> {
         val list = mutableListOf<Books>()
@@ -51,8 +58,6 @@ object LibraryCSVReader {
 
         return printBooks(list)
     }
-
-
 }
 
 

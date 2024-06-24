@@ -3,6 +3,12 @@ package doaa.mosallam.book
 import doaa.mosallam.book.LibraryCSVReader.printBooks
 
 class Library {
+    private val books = mutableListOf<Books>()
+
+    init {
+        // Assuming Credential.FilePath is defined elsewhere
+        books.addAll(LibraryCSVReader.readLibraryBooks(Credential.FilePath))
+    }
 
     fun Library() {
 //        val booksCVS = LibraryCSVReader.readLibraryBooks(Credential.FilePath)
